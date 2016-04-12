@@ -28,5 +28,5 @@ if (answerTwo.toUpperCase() === 'YES' || answerTwo.toUpperCase() === 'Y') {
   console.log(userName + ' knew that I had more than 3 pets!');
 } else {
   alert('That is incorrect, ' + userName + '. I actually have 5 total pets!');
-  console.log(userName + ' did not know that I ha more than 3 pets.');
+  console.log(userName + ' did not know that I have more than 3 pets.');
 }
