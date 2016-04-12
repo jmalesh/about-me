@@ -66,4 +66,4 @@ if (answerFive.toUpperCase() === 'YES' || answerFive.toUpperCase() === 'Y') {
 
 //end of guessing game
 
-alert('Thank you, ' + userName + ', for playing my game!');
+alert('Thank you, ' + userName + ', for playing my guessing game!');
