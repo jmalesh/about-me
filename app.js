@@ -30,3 +30,40 @@ if (answerTwo.toUpperCase() === 'YES' || answerTwo.toUpperCase() === 'Y') {
   alert('That is incorrect, ' + userName + '. I actually have 5 total pets!');
   console.log(userName + ' did not know that I have more than 3 pets.');
 }
+
+var answerThree = prompt('Do I enjoy outdoor activities?');
+if (answerThree.toUpperCase() === 'YES' || answerThree.toUpperCase() === 'Y') {
+  alert('No, ' + userName + ' ! The only outdoor activity I enjoy is sitting in a beer garden!');
+  console.log(userName + ' did not know about my disdain for the outdoors!');
+} else {
+  alert('That\'s right, ' + userName + '! The only outdoor activity I will partake in is sitting in a beer garden!');
+  console.log(userName + ' knew that they would never find me participating in outdoor activities.');
+}
+
+var answerFour = prompt('Do you think I am engaged?');
+if (answerFour.toUpperCase() === 'YES' || answerFour.toUpperCase() === 'Y') {
+  alert('Yep, ' + userName + '! I am planning a wedding for next spring!');
+  console.log(userName + ' knew I was engaged.');
+} else {
+  alert('Shockingly, ' + userName + ', someone actually agreed to marry me!');
+  console.log(userName + ' did not think anyne would want to marry me!');
+}
+
+var answerFive = prompt('Do you think you can guess what type of dog I have?');
+if (answerFive.toUpperCase() === 'YES' || answerFive.toUpperCase() === 'Y') {
+  var bonusQuestion = prompt('Ok, hotshot! What type of dog do I have?');
+  if (bonusQuestion.toUpperCase() === 'CHIHUAHUA') {
+    alert('How did you know I had a Chihuahua? Technically, I have one and a half chihuahuas! \(Yeah, figure that one out!\)');
+    console.log(userName + ' knew that I had a chihuahua!');
+  } else {
+    alert('That is WRONG, ' + userName + '! I have a chihuahua! Well, technically I have one and a half chihuahuas, but I will let you try to figure that one out.');
+    console.log(userName + ' thought they knew what kind of dog I had, but they were WRONG!');
+  }
+} else {
+  alert('That\'s ok, ' + userName + '! I will just tell you that I have a chihuahua.');
+  console.log(userName + ' did not want to guess what type of dog I have.');
+}
+
+//end of guessing game
+
+alert('Thank you, ' + userName + ', for playing my game!');
