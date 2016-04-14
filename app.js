@@ -73,7 +73,7 @@ var wrongAnswer = 'Incorrect, ' + userName + '. Try again! You have ' + guessesL
 
 while (guessesLeft <= 4 && guessesLeft > 0) {
   if (parseInt(siblingsLeft) === 3) {
-    alert('That\'s correct, ' + userName + '! I have four siblings.');
+    alert('That\'s correct, ' + userName + '! I have three siblings.');
     console.log(userName + ' guessed that I had three siblings.');
     break;
   } else if (parseInt(siblingsLeft) < 3) {
