@@ -73,7 +73,7 @@ var siblingsLeft = prompt('How many siblings do I have? You have four trys to ge
 var userGuess;
 var wrongAnswer = 'Incorrect, ' + userName + '. Try again! You have ' + guessesLeft + ' guesses left!';
 
-while (guessesLeft <= 4 && guessesLeft > 0) {
+while (guessesLeft > 0) {
   if (parseInt(siblingsLeft) === 3) {
     alert('That\'s correct, ' + userName + '! I have four siblings.');
     console.log(userName + ' guessed that I had three siblings.');
@@ -96,31 +96,32 @@ while (guessesLeft <= 4 && guessesLeft > 0) {
 //adding question seven
 var answerSeven = prompt('Can you name a member of my family? I will give you a hint: they all begin with the letter \'J\'!');
 var correctAns = ['JOHN', 'JAKE', 'JILL', 'JENELLE', 'JAYNE', 'JIM', 'JAMIE', 'JODI'];
+var possibleAnswers = 'John, Jake, Jill, Jenelle, Jayne, Jim, and Jodi';
 var arrayLength = correctAns.length;
 var moreGuesses = 5;
 var nameGuess;
-var rightAnswer = 'Great guess, ' + userName + '! You got it right!';
+var rightAnswer = 'Great guess, ' + userName + '! You got it right! Here is a list of all possible answers: ' + possibleAnswers;
 
-while (moreGuesses <= 5 && moreGuesses > 0) {
+while (moreGuesses > 0) {
   for (var i = 0; i < arrayLength; i++) {
     if (answerSeven.toUpperCase() === correctAns[i]) {
       alert(rightAnswer);
+      console.log(userName + ' guessed a correct name!');
       break;
-    } else if (answerSeven.toUpperCase () !== correctAns[i]) {
-      var answerSeven = prompt('Sorry, ' + userName + ', but that is incorrect. You have ' + moreGuesses + ' more guesses!');
-      moreGuesses--;
-      break;
-    } else {
-      var answerSeven = prompt('Input error! Please try again.');
-      break;
-    }
-    if (answerSeven !== correctAns[i] && moreGuesses === 0) {
-      alert('Sorry, ' + userName + ', you ran out of guesses! The following names would have been accepted: ' + correctAns + '.');
-      console.log(userName + ' did not correctly guess the names of my family members.');
-      break;
-    }
   }
+  break;
 }
+break;
+}
+  if (answerSeven.toUpperCase () !== correctAns[i]) {
+    var answerSeven = prompt('Sorry, ' + userName + ', but that is incorrect. You have ' + moreGuesses + ' more guesses!');
+    moreGuesses--;
+  } else if (answerSeven !== correctAns[i] && moreGuesses === 0) {
+    alert('Sorry, ' + userName + ', you ran out of guesses! The following names would have been accepted: ' + possibleAnswers + '.');
+    console.log(userName + ' did not correctly guess the names of my family members.');
+  } else {
+    var answerSeven = prompt('Input error! Please try again.');
+  }
 //end of guessing game
 
 // alert('Thank you, ' + userName + ', for playing my guessing game!');
