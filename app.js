@@ -2,7 +2,7 @@
 
 var userName = prompt('Welcome to the Guessing Game! What is your name?');
 console.log('The user\'s name is ' + userName);
-/*
+
 alert('Welcome, ' + userName + ' ! Please guess \'yes or no\' for the following questions!');
 var understandCheck = confirm('Are you ready?');
 
@@ -64,7 +64,7 @@ if (answerFive.toUpperCase() === 'YES' || answerFive.toUpperCase() === 'Y') {
   alert('That\'s ok, ' + userName + '! I will just tell you that I have a chihuahua.');
   console.log(userName + ' did not want to guess what type of dog I have.');
 }
-*/
+
 //adding count down question six
 var guessesLeft = 3;
 var siblingsLeft = prompt('How many siblings do I have? You have four trys to get it right. Make sure you enter a number!');
