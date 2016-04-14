@@ -65,7 +65,9 @@ if (answerFive.toUpperCase() === 'YES' || answerFive.toUpperCase() === 'Y') {
   console.log(userName + ' did not want to guess what type of dog I have.');
 }
 */
+
 //adding count down question six
+/*
 var guessesLeft = 3;
 var siblingsLeft = prompt('How many siblings do I have? You have four trys to get it right. Make sure you enter a number!');
 var userGuess;
@@ -90,7 +92,34 @@ while (guessesLeft <= 4 && guessesLeft > 0) {
     console.log(userName + ' did not correctly guess how many siblings I have.');
   }
 }
+*/
+//adding question seven
+var answerSeven = prompt('Can you name a member of my family? I will give you a hint: they all begin with the letter \'J\'!');
+var correctAns = ['JOHN', 'JAKE', 'JILL', 'JENELLE', 'JAYNE', 'JIM', 'JAMIE', 'JODI'];
+var arrayLength = correctAns.length;
+var moreGuesses = 5;
+var nameGuess;
+var rightAnswer = 'Great guess, ' + userName + '! You got it right!';
 
+while (moreGuesses <= 5 && moreGuesses > 0) {
+  for (var i = 0; i < arrayLength; i++) {
+    if (answerSeven.toUpperCase() === correctAns[i]) {
+      alert(rightAnswer);
+      break;
+    } else if (answerSeven.toUpperCase () !== correctAns[i]) {
+      var answerSeven = prompt('Sorry, ' + userName + ', but that is incorrect. You have ' + moreGuesses + ' more guesses!');
+      moreGuesses--;
+      break;
+    } else {
+      var answerSeven = prompt('Input error! Please try again.');
+      break;
+    }
+    if (answerSeven !== correctAns[i] && moreGuesses === 0) {
+      alert('Sorry, ' + userName + ', you ran out of guesses! The following names would have been accepted: ' + correctAns + '.');
+      console.log(userName + ' did not correctly guess how many siblings I have.');
+    }
+  }
+}
 //end of guessing game
 
 // alert('Thank you, ' + userName + ', for playing my guessing game!');
