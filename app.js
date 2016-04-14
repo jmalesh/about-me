@@ -116,7 +116,8 @@ while (moreGuesses <= 5 && moreGuesses > 0) {
     }
     if (answerSeven !== correctAns[i] && moreGuesses === 0) {
       alert('Sorry, ' + userName + ', you ran out of guesses! The following names would have been accepted: ' + correctAns + '.');
-      console.log(userName + ' did not correctly guess how many siblings I have.');
+      console.log(userName + ' did not correctly guess the names of my family members.');
+      break;
     }
   }
 }
