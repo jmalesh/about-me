@@ -36,57 +36,57 @@ var incorrect = ['Well, ' + userName + ', now you do!',
 
 //Begin guessing game
 function question1() {
-  var answerOne = prompt('Did you know that I am from Chicago?');
+  var answerOne = prompt(questions[0]);
   if (answerOne.toUpperCase() === 'YES' || answerOne.toUpperCase() === 'Y') {
-    alert('That\'s right, ' + userName + '! I am from Chicago!');
+    alert(correct[0]);
     console.log(userName + ' knew that I am from Chicago');
   } else {
-    alert('Well, ' + userName + ', now you do!');
+    alert(incorrect[0]);
     console.log(userName + ' did not know that I am from Chicago');
   }
 }
 function question2() {
-  var answerTwo = prompt('Yes or No: I have 3 or more pets?');
+  var answerTwo = prompt(questions[1]);
   if (answerTwo.toUpperCase() === 'YES' || answerTwo.toUpperCase() === 'Y') {
-    alert('That\'s right ' + userName + '! I have 5 total pets!');
+    alert(correct[1]);
     console.log(userName + ' knew that I had more than 3 pets!');
   } else {
-    alert('That is incorrect, ' + userName + '. I actually have 5 total pets!');
+    alert(incorrect[1]);
     console.log(userName + ' did not know that I have more than 3 pets.');
   }
 }
 
 function question3() {
-  var answerThree = prompt('Do I enjoy outdoor activities?');
+  var answerThree = prompt(questions[2]);
   if (answerThree.toUpperCase() === 'YES' || answerThree.toUpperCase() === 'Y') {
-    alert('No, ' + userName + ' ! The only outdoor activity I enjoy is sitting in a beer garden!');
+    alert(incorrect[2]);
     console.log(userName + ' did not know about my disdain for the outdoors!');
   } else {
-    alert('That\'s right, ' + userName + '! The only outdoor activity I will partake in is sitting in a beer garden!');
+    alert(correct[2]);
     console.log(userName + ' knew that they would never find me participating in outdoor activities.');
   }
 }
 
 function question4() {
-  var answerFour = prompt('Do you think I am engaged?');
+  var answerFour = prompt(questions[3]);
   if (answerFour.toUpperCase() === 'YES' || answerFour.toUpperCase() === 'Y') {
-    alert('Yep, ' + userName + '! I am planning a wedding for next spring!');
+    alert(correct[3]);
     console.log(userName + ' knew I was engaged.');
   } else {
-    alert('Shockingly, ' + userName + ', someone actually agreed to marry me!');
+    alert(incorrect[3]);
     console.log(userName + ' did not think anyne would want to marry me!');
   }
 }
 
 function question5() {
-  var answerFive = prompt('Do you think you can guess what type of dog I have?');
+  var answerFive = prompt(questions[4]);
   if (answerFive.toUpperCase() === 'YES' || answerFive.toUpperCase() === 'Y') {
     var bonusQuestion = prompt('Ok, hotshot! What type of dog do I have?');
     if (bonusQuestion.toUpperCase() === 'CHIHUAHUA') {
-      alert('How did you know I had a Chihuahua? Technically, I have one and a half chihuahuas! \(Yeah, figure that one out!\)');
+      alert(correct[4]);
       console.log(userName + ' knew that I had a chihuahua!');
     } else {
-      alert('That is WRONG, ' + userName + '! I have a chihuahua! Well, technically I have one and a half chihuahuas, but I will let you try to figure that one out.');
+      alert(incorrect[4]);
       console.log(userName + ' thought they knew what kind of dog I had, but they were WRONG!');
     }
   } else {
@@ -98,26 +98,26 @@ function question5() {
 //adding count down question six
 function question6 () {
   var guessesLeft = 3;
-  var siblingsLeft = prompt('How many siblings do I have? You have four trys to get it right. Make sure you enter a number!');
+  var siblingsLeft = prompt(questions[5]);
   var userGuess;
   var wrongAnswer = 'Incorrect, ' + userName + '. Try again! You have ' + guessesLeft + ' guesses left!';
 
   while (guessesLeft <= 4 && guessesLeft > 0) {
     if (parseInt(siblingsLeft) === 3) {
-      alert('That\'s correct, ' + userName + '! I have three siblings.');
+      alert(correct[5]);
       console.log(userName + ' guessed that I had three siblings.');
       break;
     } else if (parseInt(siblingsLeft) < 3) {
-      var siblingsLeft = prompt('Try again, ' + userName + '! You have ' + guessesLeft + ' guesses left!');
+      var siblingsLeft = prompt(incorrect[5]);
       guessesLeft--;
     } else if (parseInt(siblingsLeft) > 3) {
-      var siblingsLeft = prompt('Try again, ' + userName + '! You have ' + guessesLeft + ' guesses left!');
+      var siblingsLeft = prompt(incorrect[5]);
       guessesLeft--;
     } else {
       var siblingsLeft = prompt('Input error. Please enter a number!');
     }
     if (siblingsLeft !== 3 && guessesLeft === 0) {
-      alert('Sorry, ' + userName + ', you ran out of guesses! I have 3 siblings');
+      alert(incorrect[6]);
       console.log(userName + ' did not correctly guess how many siblings I have.');
     }
   }
