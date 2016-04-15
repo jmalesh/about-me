@@ -1,5 +1,5 @@
 //User inputs their name
-var guessesLeft = 5;
+var guessesLeft = 3;
 var userName = prompt('Welcome to the Guessing Game! What is your name?');
 console.log('The user\'s name is ' + userName);
 
@@ -14,7 +14,7 @@ if (understandCheck === true) {
   console.log(userName + ' might not be the sharpest tool in the shed.');
 }
 
-var questions = ['Did you know that I am from Chicago?', 'Yes or No: I have 3 or more pets?', 'Do I enjoy outdoor activities?', 'Do you think I am engaged?', 'Do you think you can guess what type of dog I have?', 'How many siblings do I have? You have four trys to get it right. Make sure you enter a number!'];
+var questions = ['Did you know that I am from Chicago?', 'Yes or No: I have 3 or more pets?', 'Do I enjoy outdoor activities?', 'Do you think I am engaged?', 'Do I have a Chihuahua named Norma?', 'How many siblings do I have? You have four trys to get it right. Make sure you enter a number!'];
 var correct = ['That\'s right, ' + userName + '! I am from Chicago!', 'That\'s right ' + userName + '! I have 5 total pets!', 'That\'s right, ' + userName + '! The only outdoor activity I will partake in is sitting in a beer garden!', 'Yep, ' + userName + '! I am planning a wedding for next spring!', 'How did you know I had a Chihuahua? Technically, I have one and a half chihuahuas! \(Yeah, figure that one out!\)', 'That\'s correct, ' + userName + '! I have three siblings.'];
 var incorrect = ['Well, ' + userName + ', now you do!', 'That is incorrect, ' + userName + '. I actually have 5 total pets!', 'No, ' + userName + ' ! The only outdoor activity I enjoy is sitting in a beer garden!', 'Shockingly, ' + userName + ', someone actually agreed to marry me!', 'That\'s ok, ' + userName + '! I will just tell you that I have a chihuahua.', 'Try again, ' + userName + '! You have ' + guessesLeft + ' guesses left!', 'Sorry, you ran out of gueesses! I have 3 siblings!'];
 var yesNo = ['YES', 'YES', 'NO', 'YES', 'YES'];
@@ -29,6 +29,32 @@ function ask() {
     }
   }
 }
+
+function questionSix () {
+  var siblingsLeft = prompt(questions[5]);
+  var userGuess = guessesLeft--;
+  var wrongAnswer = 'Incorrect, ' + userName + '. Try again! You have ' + userGuess + ' guesses left!';
+  while (guessesLeft > 0) {
+    if (parseInt(siblingsLeft) === 3) {
+      alert(correct[5]);
+      console.log(userName + ' guessed that I had three siblings.');
+      break;
+    } else if (parseInt(siblingsLeft) < 3) {
+      var siblingsLeft = prompt(wrongAnswer);
+      userGuess--;
+    } else if (parseInt(siblingsLeft) > 3) {
+      var siblingsLeft = prompt(wrongAnswer);
+      userGuess--;
+    } else {
+      var siblingsLeft = prompt('Input error. Please enter a number!');
+    }
+    if (siblingsLeft !== 3 && guessesLeft === 0) {
+      alert(incorrect[6]);
+      console.log(userName + ' did not correctly guess how many siblings I have.');
+    }
+  }
+}
+
 //Begin guessing game
 // function question1() {
 //   var answerOne = prompt(questions[0]);
