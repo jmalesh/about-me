@@ -1,0 +1,42 @@
+body {
+background-color: LightGrey;
+border-style: solid;
+border-width: thin;
+margin: 5px;
+font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  background-color:teal;
+  text-decoration: underline;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+p {
+  background-color: rgb(250, 128, 114);
+  width: 50%;
+}
+.container {
+    width: 200px;
+    height: 120px;
+}
+
+/* resize images */
+.container img {
+    width: 100%;
+    height: auto;
+}
+.scientists > p {
+ color: red;
+}
+
+.makeSmaller p {
+  border-width: thick;
+}
+
+.clearBG {
+   background-color: rgba(250, 128, 114, 0.25);
+}
